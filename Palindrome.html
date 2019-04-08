@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+        <label>Enter any Palindrome : </label>
+        <input type="text" id="text">
+        <input type="submit" value="submit" onclick="Palindrome()">
+    <script>
+    function Palindrome(){
+        var revString  = "";
+        var inpString = document.getElementById('text').value;
+        var i = inpString.length;
+        
+        for(var j=i;j>=0;j--){
+            revString = revString + inpString.charAt(j);
+            // document.write(revString + "<br>");
+        }
+        if(inpString === revString){
+            alert(inpString + " is Palindrome");
+        }
+        else{
+            alert(inpString + " is not Palindrome");
+        }
+    }
+    </script>
+</body>
+</html>
